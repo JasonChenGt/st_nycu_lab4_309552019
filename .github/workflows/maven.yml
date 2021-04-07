@@ -59,13 +59,6 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-#      - name: Get the version
-#        id: get_version
-#        run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
-#      - name: Update release version
-#        run: mvn -B versions:set -DnewVersion=${{ steps.get_version.outputs.VERSION }}-SNAPSHOT -DgenerateBackupPoms=false
-#      - name: Assemble Jar File
-#        run: mvn -B compile assembly:single
       - name: Build and test project
         run: mvn -f pom.xml verify
       - name: Copying target jar

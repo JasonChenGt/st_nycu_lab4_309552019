@@ -64,8 +64,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-      - name: Packege project
-        run: mvn packege
+      - name: Package project
+        run: mvn package
       - name: Copying target jar
         run: mkdir staging && cp target/*.jar staging
       - name: Uploading jar

@@ -60,7 +60,7 @@ jobs:
         with:
           java-version: 11
       - name: Build and test project
-        run: mvn -f pom.xml verify
+        run: mvn verify
       - name: Copying target jar
         run: mkdir staging && cp target/*.jar staging
       - name: Uploading jar
